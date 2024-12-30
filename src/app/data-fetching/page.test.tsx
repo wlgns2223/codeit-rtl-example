@@ -21,6 +21,8 @@ const handlers = [
 describe("Data Fetching Component Test Suite", () => {
   const server = setupServer(...handlers);
 
+  throw new Error("Test is not implemented");
+
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
