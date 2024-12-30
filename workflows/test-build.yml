@@ -13,8 +13,6 @@ on:
       - "feat/**"
 
   workflow_dispatch:
-    branches:
-      - dev
 
 jobs:
   # 1. 테스트 job
