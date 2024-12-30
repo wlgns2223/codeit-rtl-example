@@ -1,11 +1,21 @@
+# 버전별 테스트 방법
 name: PR
-on: pull_request
+on: push
 jobs:
   build-test:
+    strategy:
+      matrix:
+        node-version: [12, 18]
     runs-on: ubuntu-latest
     steps:
       - name: Get Codes
         uses: actions/checkout@v4
+
+      # 노드js를 설치
+      - name: Install Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
       - name: Install Deps
         run: npm install
