@@ -7,6 +7,9 @@ jobs:
       - name: Get Codes
         uses: actions/checkout@v4
 
+      - name: Install Deps
+        run: npm install
+
       - name: build
         run: npm run build
 
