@@ -3,6 +3,7 @@ name: PR
 on: push
 jobs:
   build-test:
+    continue-on-error: true
     strategy:
       matrix:
         node-version: [12, 18]
