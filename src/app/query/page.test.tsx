@@ -11,9 +11,11 @@ describe("Query Page Test", () => {
     // Act
     // query
     const ul = screen.getByRole("list");
+    const button = screen.getByRole("button");
 
     // Assert
     expect(ul).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
   });
 
   it("get by, query by, find by", async () => {
